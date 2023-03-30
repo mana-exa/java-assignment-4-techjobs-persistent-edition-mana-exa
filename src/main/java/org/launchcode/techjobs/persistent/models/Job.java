@@ -7,7 +7,9 @@ import javax.persistence.*;
 
         @ManyToOne
     private Employer employer;
-    private String skills;
+
+        @ManyToMany(mappedBy = "skills")
+        private String skills;
 
         public Job() {
             this.employer = employer;
